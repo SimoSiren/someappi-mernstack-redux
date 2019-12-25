@@ -42,7 +42,7 @@ const Dashboard = ({
             <Fragment>
               <p>Kokeile lisätä jotain sisältöä profiiliisi.</p>
               <Link to='/create-profile' className='btn btn-primary my-1'>
-                Lisää täältä
+                Lisää tästä
           </Link>
             </Fragment>
           )}
