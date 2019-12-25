@@ -40,15 +40,24 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         <Link to='/login'>Kirjaudu</Link>
       </li>
     </ul>
-  );
+  )
+
+  const style = {
+    color: 'lightBlue'
+  }
 
   return (
     <nav className='navbar bg-dark'>
-      <h1>
+      <h2>
         <Link to='/'>
-          <i className='fas fa-code' /> some-äppi <i className='fas fa-code' />
+          <i className='fas fa-home' /> some-app etusivu
         </Link>
-      </h1>
+
+        <a href='http://kaveri-chatti.herokuapp.com' target="_blank"
+          rel="noopener noreferrer"><i className='fas fa-comment' />
+          {' '}Kaveri-chatti
+        </a>
+      </h2>
       {!loading && (
         <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
       )}

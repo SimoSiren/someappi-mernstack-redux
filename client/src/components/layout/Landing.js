@@ -12,14 +12,13 @@ const Landing = ({ isAuthenticated }) => {
     <section className='landing'>
       <div className='dark-overlay'>
         <div className='landing-inner'>
-          <h1 className='x-large'>softakehittäjien-some-äppi</h1>
-          <h1 className='large'>treeniprojekti</h1>
+          <h1 className='large'>some projekti</h1>
           <p className='lead'>
-            Luo kehittäjäprofiili, verkostoidu, jaa osaamista.
+            Voit luoda softakehittäjä profiilin, julkaista, kommentoida ja tykätä
           </p>
           <div className='buttons'>
             <Link to='/register' className='btn btn-primary'>
-              Rekisteröidy
+              Luo tili
             </Link>
             <Link to='/login' className='btn btn-light'>
               Kirjaudu

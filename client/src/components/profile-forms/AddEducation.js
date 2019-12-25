@@ -1,8 +1,8 @@
-import React, { Fragment, useState } from 'react';
-import { Link, withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { addEducation } from '../../actions/profile';
+import React, { Fragment, useState } from 'react'
+import { Link, withRouter } from 'react-router-dom'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { addEducation } from '../../actions/profile'
 
 const AddEducation = ({ addEducation, history }) => {
   const [formData, setFormData] = useState({
@@ -13,9 +13,9 @@ const AddEducation = ({ addEducation, history }) => {
     to: '',
     current: false,
     description: ''
-  });
+  })
 
-  const [toDateDisabled, toggleDisabled] = useState(false);
+  const [toDateDisabled, toggleDisabled] = useState(false)
 
   const {
     school,
@@ -25,10 +25,10 @@ const AddEducation = ({ addEducation, history }) => {
     to,
     current,
     description
-  } = formData;
+  } = formData
 
   const onChange = e =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value })
 
   return (
     <Fragment>
@@ -40,14 +40,14 @@ const AddEducation = ({ addEducation, history }) => {
       <form
         className='form'
         onSubmit={e => {
-          e.preventDefault();
-          addEducation(formData, history);
+          e.preventDefault()
+          addEducation(formData, history)
         }}
       >
         <div className='form-group'>
           <input
             type='text'
-            placeholder='* School or Bootcamp'
+            placeholder='* Koulu tai kurssi'
             name='school'
             value={school}
             onChange={e => onChange(e)}
@@ -90,8 +90,8 @@ const AddEducation = ({ addEducation, history }) => {
               checked={current}
               value={current}
               onChange={() => {
-                setFormData({ ...formData, current: !current });
-                toggleDisabled(!toDateDisabled);
+                setFormData({ ...formData, current: !current })
+                toggleDisabled(!toDateDisabled)
               }}
             />{' '}
             Nykyinen oppilaitos
@@ -123,14 +123,14 @@ const AddEducation = ({ addEducation, history }) => {
         </Link>
       </form>
     </Fragment>
-  );
-};
+  )
+}
 
 AddEducation.propTypes = {
   addEducation: PropTypes.func.isRequired
-};
+}
 
 export default connect(
   null,
   { addEducation }
-)(withRouter(AddEducation));
+)(withRouter(AddEducation))
