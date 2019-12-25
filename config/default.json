@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://sirensimo7:Jeesus7777!@simozon-e2242.mongodb.net/some-app?retryWrites=true",
+  "jwtSecret": "secreto",
+  "githubClientId": "",
+  "githubSecret": ""
+}
