@@ -1,19 +1,20 @@
-import React, { Fragment, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import Spinner from '../layout/Spinner';
-import ProfileItem from './ProfileItem';
-import { getProfiles } from '../../actions/profile';
+import React, { Fragment, useEffect } from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import Spinner from '../layout/Spinner'
+import ProfileItem from './ProfileItem'
+import { getProfiles } from '../../actions/profile'
 
 const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
-    getProfiles();
-  }, [getProfiles]);
+    getProfiles()
+  }, [getProfiles])
 
   return (
     <Fragment>
-      {loading ? (
-        <Spinner />
+      {loading ? (<div>
+        <p>Haetaan tietoja...</p>
+        <Spinner /></div>
       ) : (
           <Fragment>
             <h1 className='large text-primary'>Kehittäjät</h1>
@@ -32,19 +33,19 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
           </Fragment>
         )}
     </Fragment>
-  );
-};
+  )
+}
 
 Profiles.propTypes = {
   getProfiles: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired
-};
+}
 
 const mapStateToProps = state => ({
   profile: state.profile
-});
+})
 
 export default connect(
   mapStateToProps,
   { getProfiles }
-)(Profiles);
+)(Profiles)

@@ -47,7 +47,7 @@ const AddEducation = ({ addEducation, history }) => {
         <div className='form-group'>
           <input
             type='text'
-            placeholder='* Koulu tai kurssi'
+            placeholder='* Oppilaitos'
             name='school'
             value={school}
             onChange={e => onChange(e)}
@@ -57,7 +57,7 @@ const AddEducation = ({ addEducation, history }) => {
         <div className='form-group'>
           <input
             type='text'
-            placeholder='* Degree or Certificate'
+            placeholder='* Tutkinto / kurssi'
             name='degree'
             value={degree}
             onChange={e => onChange(e)}
@@ -67,7 +67,7 @@ const AddEducation = ({ addEducation, history }) => {
         <div className='form-group'>
           <input
             type='text'
-            placeholder='Field of Study'
+            placeholder='Koulutusala'
             name='fieldofstudy'
             value={fieldofstudy}
             onChange={e => onChange(e)}
@@ -112,7 +112,7 @@ const AddEducation = ({ addEducation, history }) => {
             name='description'
             cols='30'
             rows='5'
-            placeholder='Program Description'
+            placeholder='Kuvaus'
             value={description}
             onChange={e => onChange(e)}
           />
