@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { addPost } from '../../actions/post';
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { addPost } from '../../actions/post'
 
 const PostForm = ({ addPost }) => {
-  const [text, setText] = useState('');
+  const [text, setText] = useState('')
 
   return (
     <div className='post-form'>
@@ -14,9 +14,9 @@ const PostForm = ({ addPost }) => {
       <form
         className='form my-1'
         onSubmit={e => {
-          e.preventDefault();
-          addPost({ text });
-          setText('');
+          e.preventDefault()
+          addPost({ text })
+          setText('')
         }}
       >
         <textarea
@@ -31,14 +31,14 @@ const PostForm = ({ addPost }) => {
         <input type='submit' className='btn btn-dark my-1' value='Submit' />
       </form>
     </div>
-  );
-};
+  )
+}
 
 PostForm.propTypes = {
   addPost: PropTypes.func.isRequired
-};
+}
 
 export default connect(
   null,
   { addPost }
-)(PostForm);
+)(PostForm)
